@@ -31,10 +31,14 @@
             <div= class='row'>
                 <div class="card">
                     <div class="card-body">
-                      <!--This will be the goal value-->
+                      <!--This will be the randomized value-->
                       Goal:
+                      <span id="number-to-guess"></span>
                     </div>
                   </div>
+
+                    <div id="crystals">
+                    </div>
 ​
                 <div class="card">
                     <div class="card-body">
@@ -49,8 +53,8 @@
 ​
         <div class='container'>
             <div class= 'row'>
-                <!--these still need css for crystal images-->
-                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
                         <div class="btn-group mr-2" role="group" aria-label="First group">
                           <button type="button" class="btn btn-secondary"><img src="assets/images/clearrock.png" alt="clear" class="responsive"></button>
                           <button type="button" class="btn btn-secondary"><img src="assets/images/topazrock.png" alt="clear" class="responsive"></button>
@@ -64,7 +68,7 @@
         <br><br>
 ​
         <div class= 'container'>
-            <div class="card">
+            <div class="card" id="score">
                 <div class="card-body">
                     <!--This will be the total score card-->
                         Your total score is:
