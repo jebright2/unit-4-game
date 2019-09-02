@@ -1,0 +1,24 @@
+.responsive {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+
+#score {
+    width: 20%;
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/goldglit.jpeg);
+}
+
+.jumbotron {
+    background: rgba(204, 204, 204, 0.5);
+    font-weight: bold;
+    color: white;
+}
+
+.btn {
+    background-color: rgba(204, 204, 204, 0.5);
+}

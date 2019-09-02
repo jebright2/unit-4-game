@@ -1,12 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+​
+<title> Crystal Collector!</title>
+​
+<header>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src ="assets/javascript/game.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</header>
+​
+    <body>
+            <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="pageName">Crystal Collectors!</h1>
+                      <p class="instructions">You will be given a random number to start this game. <br>
+                      There are 4 crystals below. Each crystal represents a hidden value that you must uncover using your own reasoning. <br>
+                      Clicking on the crystals will add its given value to your score. Each of the values will change with every new game, so no cheating. &#129488<br>
+                      You win by matching your total score to the goal number. If you go over, you will lose the game. Good Luck!
+                      
+​
+                      </p>
+                    </div>
+            </div>
+​
+        <div class='container'>
+            <div= class='row'>
+                <div class="card">
+                    <div class="card-body">
+                      <!--This will be the goal value-->
+                      Goal:
+                    </div>
+                  </div>
+​
+                <div class="card">
+                    <div class="card-body">
+                    <!--This will be the win/loss card-->
+                        Wins: <br>
+                        Loss:
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+​
+        <div class='container'>
+            <div class= 'row'>
+                <!--these still need css for crystal images-->
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group mr-2" role="group" aria-label="First group">
+                          <button type="button" class="btn btn-secondary"><img src="assets/images/clearrock.png" alt="clear" class="responsive"></button>
+                          <button type="button" class="btn btn-secondary"><img src="assets/images/topazrock.png" alt="clear" class="responsive"></button>
+                          <button type="button" class="btn btn-secondary"><img src="assets/images/redrock.png" alt="clear" class="responsive"></button>
+                          <button type="button" class="btn btn-secondary"><img src="assets/images/yellrock.png" alt="clear" class="responsive"></button>
+                        </div>
+                </div>
+            </div>
+        </div>
+​
+        <br><br>
+​
+        <div class= 'container'>
+            <div class="card">
+                <div class="card-body">
+                    <!--This will be the total score card-->
+                        Your total score is:
+                </div>
+            </div>
+        </div>
+​
+​
+​
+    </body>
+​
 </html>
