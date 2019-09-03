@@ -7,7 +7,7 @@ var max = 120;
 var win;
 var loss;
 
-var targetNumber = (Math.floor(Math.random() * (max - min + 1)) + min); 
+var targetNumber = (Math.floor(Math.random() * 121)); 
 
  $("#number-to-guess").text(targetNumber);
 
