@@ -2,12 +2,14 @@ var crys1 = [0];
 var crys2 = [1];
 var crys3 = [2];
 var crys4 = [3];
-var min =
-var max = 
+var min = 19;
+var max = 120;
+var win;
+var loss;
 
-var targetNumber = (Math.floor(Math.random() * (max - min + 1)) + min);
+var targetNumber = (Math.floor(Math.random() * (max - min + 1)) + min); 
 
-$("#number-to-guess").text(targetNumber);
+ $("#number-to-guess").text(targetNumber);
 
 var counter = 0;
 
@@ -42,4 +44,4 @@ var numberOptions = [10, 5, 3, 7];
     alert("You lose!!");
   }
 
-});
+}); 
