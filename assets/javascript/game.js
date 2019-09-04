@@ -18,16 +18,24 @@ for (var i = 0; i < 1; i++) {
     var crys3 = (Math.floor(Math.random() * 12) + 1);
     var crys4 = (Math.floor(Math.random() * 12) + 1);
         console.log(crys1, crys2, crys3, crys4);  
-}
 
-$("#crys").on("click", function() {      
+    var imageCrystal = $("<img>");
+
+    imageCrystal.addClass("crystal-image");
+    
+    imageCrystal.attr("data-crystalvalue", (crys1, crys2, crys3, crys4));
+    
+    $("#totalscore").append(imageCrystal);
+
+
+$(".crystal-image").on("click", function() {      
 
   var crystalValue = ($(this).attr("data-crystalvalue"));
   crystalValue = parseInt(crystalValue);
 
   counter += crystalValue;
-  alert("New score: " + counter);
-
+  console.log("New score: " + counter);
+   
   if (counter === targetNumber) {
     alert("You win!");
     win++;
@@ -40,3 +48,4 @@ $("#crys").on("click", function() {
 
 }); 
 
+}
