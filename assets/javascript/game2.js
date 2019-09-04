@@ -5,7 +5,7 @@ var loss;
 
 var targetNumber = (Math.floor(Math.random() * 102) + 19); 
 $("#targetNumber").html('Target Number: ' + targetNumber);
-// Add my number numberOptions.lenth back into the code once I know it works
+
 for (var i = 0; i < 4; i++) {
     
     var crystalNumber = (Math.floor(Math.random() * 12) + 1);
@@ -17,5 +17,8 @@ for (var i = 0; i < 4; i++) {
         });
 
     $(".crystals").append(crystal);
-
 } 
+
+$(".crystal").on('click', function() {
+    console.log($(this).attr('data-crystalvalue'));
+});

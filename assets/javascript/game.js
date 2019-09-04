@@ -2,12 +2,10 @@ var crys1 = [0];
 var crys2 = [1];
 var crys3 = [2];
 var crys4 = [3];
-var min = 19;
-var max = 120;
 var win;
 var loss;
 
-var targetNumber = (Math.floor(Math.random() * 102)+19); 
+var targetNumber = (Math.floor(Math.random() * 102) + 19); 
 
  $("#number-to-guess").text(targetNumber);
 
