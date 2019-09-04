@@ -34,8 +34,8 @@ $(".crystal-image").on("click", function() {
   crystalValue = parseInt(crystalValue);
 
   counter += crystalValue;
-  console.log("New score: " + counter);
-   
+  $("#totalScore").html("New score: " + counter);
+    
   if (counter === targetNumber) {
     alert("You win!");
     win++;
