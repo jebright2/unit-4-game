@@ -1,9 +1,9 @@
-var crys1 = [0];
-var crys2 = [1];
-var crys3 = [2];
-var crys4 = [3];
-var win;
-var loss;
+var crys1;
+var crys2;
+var crys3;
+var crys4;
+var win = 0;
+var loss = 0;
 
 var targetNumber = (Math.floor(Math.random() * 102) + 19); 
 
@@ -11,18 +11,21 @@ var targetNumber = (Math.floor(Math.random() * 102) + 19);
 
 var counter = 0;
 
-var numberOptions = [10, 5, 3, 7];
+for (var i = 0; i < 4; i++) {
+    
+    var crys1 = (Math.floor(Math.random() * 12) + 1);
+    var crys2 = (Math.floor(Math.random() * 12) + 1);
+    var crys3 = (Math.floor(Math.random() * 12) + 1);
+    var crys4 = (Math.floor(Math.random() * 12) + 1);
+        console.log(crys1, crys2, crys3, crys4);
+    var crystal = $("<div>");
+        crystal.attr({
+            "class": 'crystal',
+            "data-crystalvalue": crys()
+        });
 
- for (var i = 0; i < numberOptions.length; i++) {
-
-  var imageCrystal = $("<img>");
-
-  imageCrystal.addClass("crystal-image");
-
-  imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-
-  $("#crystals").append(imageCrystal);
-}
+    $("#crys").append(crystal);
+} 
 
  $(".crystal-image").on("click", function() {
 
