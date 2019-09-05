@@ -25,16 +25,18 @@ for (var i = 0; i < 1; i++) {
     
     imageCrystal.attr("data-crystalvalue", (crys1, crys2, crys3, crys4));
     
-    $("#totalscore").append(imageCrystal);
-
-
+    $("#totalScore").append(imageCrystal);
+        console.log(crystalValue)
+   
 $(".crystal-image").on("click", function() {      
 
   var crystalValue = ($(this).attr("data-crystalvalue"));
   crystalValue = parseInt(crystalValue);
 
   counter += crystalValue;
-  $("#totalScore").html("New score: " + counter);
+  $("#totalScore").text(crystalValue);
+
+
     
   if (counter === targetNumber) {
     alert("You win!");
