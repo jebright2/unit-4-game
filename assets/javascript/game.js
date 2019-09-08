@@ -44,11 +44,13 @@ $(".btn").on("click", function() {
     
   if (counter === targetNumber) {
     alert("You win!!!");
+    wins++;
     $("#wins").text(wins);
   }
 
   else if (counter >= targetNumber) {
     alert("You lose!!");
+    loss++;
     $("#loss").text(loss);
   }
 
