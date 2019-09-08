@@ -3,7 +3,7 @@ var crys2;
 var crys3;
 var crys4;
 var crystalTotal = 0;
-var win = 0;
+var wins = 0;
 var loss = 0;
 
 var targetNumber = (Math.floor(Math.random() * 102) + 19); 
