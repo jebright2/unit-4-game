@@ -2,6 +2,7 @@ var crys1;
 var crys2;
 var crys3;
 var crys4;
+var crystalTotal = 0;
 var win = 0;
 var loss = 0;
 
@@ -19,22 +20,20 @@ for (var i = 0; i < 1; i++) {
     var crys4 = (Math.floor(Math.random() * 12) + 1);
         console.log(crys1, crys2, crys3, crys4);  
 
-    var imageCrystal = $("<img>");
-
-    imageCrystal.addClass("crystal-image");
+    var imageCrystal = $("#crys1");
     
-    imageCrystal.attr("data-crystalvalue", (crys1, crys2, crys3, crys4));
+    imageCrystal.attr("data-crystalvalue", crys1);
     
-    $("#totalScore").append(imageCrystal);
-        console.log(crystalValue)
+    // $("#totalScore").append(imageCrystal);
+        console.log(crystalTotal)
    
-$(".crystal-image").on("click", function() {      
+$(".btn").on("click", function() {      
 
   var crystalValue = ($(this).attr("data-crystalvalue"));
   crystalValue = parseInt(crystalValue);
 
   counter += crystalValue;
-  $("#totalScore").text(crystalValue);
+  $("#totalScore").text(counter);
 
 
     
