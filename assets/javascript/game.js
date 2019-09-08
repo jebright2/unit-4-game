@@ -20,37 +20,36 @@ for (var i = 0; i < 1; i++) {
     var crys4 = (Math.floor(Math.random() * 12) + 1);
         console.log(crys1, crys2, crys3, crys4);  
 
-    var imageCrystal = $("#crys1");
+    var imageCrystal1 = $("#crys1");
     var imageCrystal2 = $("#crys2");
     var imageCrystal3 = $("#crys3");
     var imageCrystal4 = $("#crys4");
 
-    imageCrystal.attr("data-crystalvalue", crys1);
+    imageCrystal1.attr("data-crystalvalue", crys1);
     imageCrystal2.attr("data-crystalvalue", crys2);
     imageCrystal3.attr("data-crystalvalue", crys3);
     imageCrystal4.attr("data-crystalvalue", crys4);
 
-    // $("#totalScore").append(imageCrystal);
         console.log(crystalTotal)
    
 $(".btn").on("click", function() {      
 
   var crystalValue = ($(this).attr("data-crystalvalue"));
   crystalValue = parseInt(crystalValue);
+  console.log(crystalValue);
 
   counter += crystalValue;
   $("#totalScore").text(counter);
 
-
     
   if (counter === targetNumber) {
-    alert("You win!");
-    win++;
+    alert("You win!!!");
+    $("#wins").text(wins);
   }
 
   else if (counter >= targetNumber) {
     alert("You lose!!");
-    loss++;
+    $("#loss").text(loss);
   }
 
 }); 
