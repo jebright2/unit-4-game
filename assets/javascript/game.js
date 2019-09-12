@@ -12,6 +12,9 @@ var targetNumber = (Math.floor(Math.random() * 102) + 19);
  $("#number-to-guess").text(targetNumber);
 
 var counter = 0;
+$("#wins").text(0);
+$("#loss").text(0);
+
        
 for (var i = 0; i < 1; i++) {
 
@@ -51,7 +54,7 @@ $(".btn").on("click", function() {
     
   }
 
-  else if (counter >= targetNumber) {
+  else if (counter > targetNumber) {
     alert("You lose!!");
     loss++;
     $("#loss").text(loss);
@@ -63,13 +66,14 @@ $(".btn").on("click", function() {
      //Resets the game
   function reset() {
     targetNumber = Math.floor(Math.random() * 101 + 19);
-    $("#totalScore").text("Number To Get: " + targetNumber);
+    $("#number-to-guess").text(targetNumber);
     crys1 = Math.floor(Math.random() * 11 + 1);
     crys2 = Math.floor(Math.random() * 11 + 1);
     crys3 = Math.floor(Math.random() * 11 + 1);
     crys4 = Math.floor(Math.random() * 11 + 1);
     counter = 0;
     $("#totalScore").text(counter);
+   
 }; 
     
 
