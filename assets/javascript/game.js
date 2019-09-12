@@ -6,6 +6,7 @@ var crystalTotal = 0;
 var wins = 0;
 var loss = 0;
 
+
 var targetNumber = (Math.floor(Math.random() * 102) + 19); 
 
  $("#number-to-guess").text(targetNumber);
@@ -46,14 +47,33 @@ $(".btn").on("click", function() {
     alert("You win!!!");
     wins++;
     $("#wins").text(wins);
+    reset();
+    
   }
 
   else if (counter >= targetNumber) {
     alert("You lose!!");
     loss++;
     $("#loss").text(loss);
+
+    reset();
+
   }
 
-}); 
+     //Resets the game
+  function reset() {
+    targetNumber = Math.floor(Math.random() * 101 + 19);
+    $("#totalScore").text("Number To Get: " + targetNumber);
+    crys1 = Math.floor(Math.random() * 11 + 1);
+    crys2 = Math.floor(Math.random() * 11 + 1);
+    crys3 = Math.floor(Math.random() * 11 + 1);
+    crys4 = Math.floor(Math.random() * 11 + 1);
+    counter = 0;
+    $("#totalScore").text(counter);
+}; 
+    
+
+
+ });
 
 }
