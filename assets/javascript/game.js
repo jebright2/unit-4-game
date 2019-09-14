@@ -14,7 +14,7 @@ var targetNumber = (Math.floor(Math.random() * 102) + 19);
 var counter = 0;
 $("#wins").text(0);
 $("#loss").text(0);
-
+$("totalScore").text(counter);
        
 for (var i = 0; i < 1; i++) {
 
@@ -72,6 +72,17 @@ $(".btn").on("click", function() {
     crys3 = Math.floor(Math.random() * 11 + 1);
     crys4 = Math.floor(Math.random() * 11 + 1);
     counter = 0;
+
+    imageCrystal1 = $("#crys1");
+    imageCrystal2 = $("#crys2");
+    imageCrystal3 = $("#crys3");
+    imageCrystal4 = $("#crys4");
+
+    imageCrystal1.attr("data-crystalvalue", crys1);
+    imageCrystal2.attr("data-crystalvalue", crys2);
+    imageCrystal3.attr("data-crystalvalue", crys3);
+    imageCrystal4.attr("data-crystalvalue", crys4);
+
     $("#totalScore").text(counter);
    
 }; 
